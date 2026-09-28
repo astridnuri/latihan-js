@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JavaScript-2</title>
+</head>
+
+<body>
+
+    <script>
+        let nama = "Tri Adhy Yulianto";
+        let persenHadir = 90;
+        let nilaiTeori = 75;
+        let nilaiPraktek = 80;
+        let pelanggaranBerat = false;
+        let nilaiRata2 = (parseFloat(nilaiTeori) + parseFloat(nilaiPraktek))  / 2;
+
+        console.log("Nama : " + nama);
+        console.log("Rata-rata : " + nilaiRata2);
+        if (parseFloat(persenHadir) < 90 || parseFloat(nilaiTeori) < 75 || parseFloat(nilaiPraktek) < 80 || pelanggaranBerat === true) {
+            console.log("Status : Tidak Lulus");
+        } else if (nilaiRata2 > 90 && pelanggaranBerat === false) {
+            console.log("Status : Sangat Baik");
+        } else if (nilaiRata2 > 85 && pelanggaranBerat === false) {
+            console.log("Status : Baik");
+        } else {
+            console.log("Status : Lulus");
+        }
+    </script>
+</body>
+
+<script>
+    if (parsefloat(persenHadir)<90 || nilaiTeori<75 || syarat3 || syarat4){
+
+    }
+</script>
+
+</html>

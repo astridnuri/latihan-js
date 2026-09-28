@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Javascript</title>
+</head>
+
+<body>
+
+    <script>
+        //let
+        //var
+        //const
+
+        let nama = "Anton";
+        nama = "tes"
+        console.log(nama);
+
+        var alamat = "Bogor";
+        console.log(alamat);
+
+        const nilaiTetap = 10;
+        //nilaiTetap = 20;
+        console.log(nilaiTetap);
+
+        //Object & Immutability
+        //Object
+        const peserta = {
+            nama: "Tono"
+        }
+        peserta.alamat = "Kp. Sawah";
+        console.log(peserta);
+
+        //Immutability: membuat objek baru menggunakan spread operator (...)
+        const pesertaBaru = { ...peserta, nim: "103032630007" }
+        console.log(pesertaBaru);
+
+        //1. STRING & TEMPLATE LITERALS
+        const namaDepan = "Susi";
+        const namaBelakang = "Susanti";
+        let literalsContoh = `
+            Nama Depan      : ${namaDepan}
+            Nama Belakang   : ${namaBelakang}
+        `;
+        console.log(namaDepan + " " + namaBelakang);
+        console.log(literalsContoh);
+
+        //OPERATOR ARITMATIKA & ASSIGNMENT
+        //+-*/
+        let angka1 = 1;
+        let angka2 = 1;
+
+        console.log(angka1 + angka2, angka1 - angka2, angka1 * angka2, angka1 / angka2);
+
+        let a = 7;
+        a += 10;
+        console.log(a);
+
+        //OPERATOR PERBANDINGAN & LOGIKA
+        let user = "admin";
+        let password = "abc123";
+
+        if (user === "admin" && password === "abc123") {
+            console.log("LOGIN SUKSES");
+        } else {
+            console.log("Gagal");
+        }
+
+        console.log("5>10:", 5 > 10);
+        console.log("5<10:", 5 < 10);
+
+        //IF TENARY vs IF BIASA
+        //IF BIASA
+        let umur = 20;
+        if (umur >= 15) {
+            console.log("Dewasa");
+        } else {
+            console.log("Bocil");
+        }
+
+        //IF TENARY
+        umur = 10;
+        let tenary = (umur >= 15) ? "Dewasa" : "Bocil";
+        console.log(tenary);
+
+        //Switch Case
+        const username = "admin";
+        switch (username) {
+            case "pimpinan":
+                console.log("ini pimpinan");
+                break;
+            case "kasir":
+                console.log("ini kasir");
+                break;
+            case "admin":
+                console.log("ini admin");
+                break;
+
+            default:
+                break;
+        }
+
+        //FUNCTION
+        function demoScope() {
+            if (true) {
+                var varVariable = "Saya var (Function Scope)";
+                let letVariable = "Saya let (Block Scope)";
+                const constVariable = "Saya const (Block Scope)";
+            }
+            // console.log(varVariable);
+            // console.log(letVariable);
+            // console.log(constVariable);
+        }
+        demoScope();
+        //Traditional Function Express (ES5)
+        const squareES5 = function (x) {
+            return x * x;
+        }
+        console.log(squareES5(4));
+
+        //ARROW FUNCTION (ES6+) - EXPLICIT RETURN
+        const squareES6 = (x) => {
+            return x * x;
+        }
+        console.log(squareES6(2));
+
+        //ARROW FUNCTION (ES6+) - IMPLICIT RETURN
+        const squareESImplicit = (x) => x * x;
+        console.log(squareESImplicit(5));
+
+        //Penggunaan pada Method Array
+        const fruits = ["apel", "nanas", "duren"];
+        const squareFruits = fruits.map((fruit) => fruit);
+        console.log(squareFruits[1]);
+
+        //LOOPING FOR
+        for (let index = 1; index < 5; index++) {
+            console.log("Perulangan ke- " + index);
+            // const element = array[index];
+            a
+        }
+
+        let no = 1;
+        while (no < 5) {
+            console.log(`Ini nomor ke-${no}`);
+            no++;
+        }
+
+        do {
+            console.log(`Nilai x = ${x}`);
+            x++;
+        } while (x <= 5);
+    </script>
+</body>
+
+</html>
