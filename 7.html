@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Document Object Model</title>
+</head>
+
+<body>
+    <h1 id="title">Teks Awal</h1>
+    <p id="description">Deskripsi Awal</p>
+    <p id="status">Status Awal</p>
+    <div id="modul">
+        <ul id="modulUl"></ul>
+    </div>
+
+    <script>
+        const body = document.body
+        const title = document.getElementById('title')
+        const desc = document.getElementById('description')
+        const status = document.querySelector('#status')
+
+        body.style.backgroundColor = "pink";
+        title.style.color = "white"
+        title.innerText = "PPKD Jakarta Pusat"
+        desc.style.color = "fuchsia"
+        desc.innerText = "Selamat Datang"
+        status.style.color = "blue"
+        status.innerHTML = "Tersertifikasi BNSP"
+
+        //create element dan 
+        const modul = document.getElementById('modul')
+        const modulUl = document.getElementById('modulUl')
+        const listUnit = [
+            "Mengimplementasikan User Interface", "Melakukan Instalasi Software Tools Pemrograman"
+        ]
+
+        //create element
+        //createElement()
+        const isiModul = document.createElement('p')
+        isiModul.innerText = "Laravel adalah Framework PHP"
+        isiModul.style.color = "white"
+
+        modul.appendChild(isiModul)
+
+        listUnit.forEach((unitText) => {
+            const itemLi = document.createElement('li')
+            itemLi.innerText = unitText;
+            itemLi.style.marginBottom = "8px"
+
+            modulUl.appendChild(itemLi)
+        })
+    </script>
+</body>
+
+</html>

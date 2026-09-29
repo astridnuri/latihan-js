@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //array adalah struktur data di mana datanya bs dsimpen lebih dari 1
+        let nama = ["Budi", "Laras", "Andri"] //0,1,2
+        let keranjang = ["Buah", "Sayuran", "Ikan"] //0,1,2
+        console.log(nama[0], nama[1], nama[2]);
+        console.log(keranjang[2]);
+        nama[2] = "Agung"
+        console.log(nama)
+        nama.push("Raka")
+        console.log(nama);
+        nama.unshift("Gibran")
+        console.log(nama)
+        const target = nama.indexOf("Raka")
+        console.log(target)
+
+        //length: count
+        const total = nama.length;
+        const totalKeranjang = keranjang.length;
+        console.log(nama.length)
+
+        //spread operator: ...
+        nama = [...nama, "Wawan"]
+        nama = ["Febri", ...nama]
+        console.log(nama)
+
+    </script>
+</body>
+
+</html>

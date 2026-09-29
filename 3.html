@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const nilai = 80;
+        const lulus = 75;
+        if (nilai >= lulus) {
+            console.log("Selamat, anda lulus");
+        } else {
+            console.log("Anda belum lulus");
+        }
+
+        //!: not
+        //!empty: tidak kosong
+        const warna = "Biru";
+        if (warna !== "Biru") {
+            console.log("iya betul biru");
+        } else {
+            console.log("bukan biru");
+        }
+
+        //banyak if, pengecekan banyak statement & kondisi
+        //else if
+
+        const totalBelanja = 1000000;
+        const isMember = false;
+        let diskon = 0;
+
+        if (isMember || totalBelanja >= 2000000) {
+            diskon = .5 //diskon 10%
+        } else if (totalBelanja >= 500000) {
+            diskon = .2 //diskon 20%
+        } else {
+            diskon = 0;
+        }
+
+        const potongan = totalBelanja * diskon;
+        const bayar = totalBelanja - potongan;
+
+        //template literal
+        //``: backtick
+
+        console.log("Potongan harga :", potongan);
+        console.log(`Potongan harga : ${potongan}`)
+        console.log(`Total bayar : ${bayar}`)
+
+        //switch case
+        const color = "ungu";
+        switch (color) {
+            case "biru":
+                console.log("iya biru");
+                break;
+
+            default:
+                console.log("Bukan biru");
+        }
+
+    </script>
+</body>
+
+</html>
