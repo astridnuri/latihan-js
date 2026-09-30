@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & event</title>
+</head>
+
+<body>
+    <h1>Form Sapaan</h1>
+    <input type="text" id="nama" placeholder="Masukkan Nama">
+    <button id="simpan">Klik Saya</button>
+    <button id="hapus">Hapus</button>
+    <p id="sapaan">Halo nama : </p>
+    <script>
+        //event: kejadian, apa yg tjadi onclick,. onchange, onkeyup,onkeydown
+        const heading = document.querySelector('h1')
+        const nama = document.querySelector('#nama')
+        const sapaan = document.querySelector('#sapaan')
+
+        //buuat function supaya bisa dipakai berulang kali
+        function prosesSapaan() {
+            sapaan.innerText = `Halo ${nama.value}`
+        }
+
+        document.getElementById('simpan').addEventListener('click', () => {
+            prosesSapaan()
+        })
+
+        document.getElementById('simpan').addEventListener('click', () => {
+            heading.innerText = "PPKD JP"
+        })
+
+        nama.addEventListener('keyup', function (event) {
+            if (event.key === "Enter") {
+                prosesSapaan()
+                nama.value = ""
+            }
+        })
+        document.getElementById('hapus').addEventListener('click', function () {
+            heading.innerText = ""
+        })
+    </script>
+
+</body>
+
+</html>
